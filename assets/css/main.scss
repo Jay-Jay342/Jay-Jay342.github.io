@@ -1,3 +1,4 @@
+# Only the main Sass file needs front matter (the dashes are enough)
 search: false
 ---
 
@@ -72,10 +73,6 @@ search: false
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
-.portfolio-card-grid--projects {
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-}
-
 .portfolio-card {
   display: block;
   padding: 1.25rem;
@@ -91,11 +88,6 @@ search: false
   color: inherit;
 }
 
-.portfolio-card--project:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
-  border-color: #9ca3af;
-}
 
 .portfolio-card__title {
   margin: 0 0 0.7rem;
@@ -107,14 +99,6 @@ search: false
   margin: 0;
   line-height: 1.7;
   color: #4b5563;
-}
-
-.portfolio-card__link {
-  display: inline-block;
-  margin-top: 1rem;
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: #2563eb;
 }
 
 .portfolio-contact-list {

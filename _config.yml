@@ -119,7 +119,8 @@ author:
   avatar           : "/assets/images/Me.jpg"
   bio              : "Insight Analyst"
   location         : "Wiltshire"
-  links:
+  email            : "jasonjackson-allen@hotmail.com"
+    links:
    - label: "Email"
     icon: "fas fa-fw fa-envelope"
     url: "mailto:jasonjackson-allen@hotmail.com"

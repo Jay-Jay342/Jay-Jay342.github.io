@@ -3,7 +3,7 @@ layout: single
 title: ""
 permalink: /
 header:
-  overlay_color: "#f5f5f5"
+  overlay_color: "#ffffff"
 ---
 
 <style>
@@ -16,7 +16,7 @@ header:
   gap: 2rem;
 }
 
-/* Image side */
+/* Image */
 .hero__image {
   display: flex;
   justify-content: center;
@@ -25,10 +25,9 @@ header:
 .hero__image img {
   max-width: 100%;
   height: auto;
-  border-radius: 12px;
 }
 
-/* Text side */
+/* Content */
 .hero__content {
   padding: 0 1rem;
 }
@@ -54,45 +53,50 @@ header:
 }
 
 .hero__btn {
-  display: inline-block;
   padding: 0.7rem 1.1rem;
   border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
-  transition: 0.2s ease;
 }
 
-/* Primary button */
 .hero__btn--primary {
   background: #111;
   color: #fff !important;
 }
 
-.hero__btn--primary:hover {
-  background: #333;
-}
-
-/* Secondary button */
 .hero__btn--secondary {
   border: 1px solid #ccc;
   color: #333 !important;
 }
 
-.hero__btn--secondary:hover {
+/* ICONS */
+.hero__icons {
+  margin-top: 1.4rem;
+  display: flex;
+  gap: 1rem;
+}
+
+/* Circular icon buttons */
+.hero__icon {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  background: #fff;
+  transition: 0.2s ease;
+}
+
+.hero__icon:hover {
+  transform: translateY(-2px);
   border-color: #999;
 }
 
-/* Social icons */
-.hero__icons {
-  margin-top: 1.25rem;
-  display: flex;
-  gap: 0.8rem;
-}
-
-.hero__icons a {
-  color: #333;
-  font-size: 1.2rem;
-  text-decoration: none;
+.hero__icon svg {
+  width: 20px;
+  height: 20px;
+  fill: #333;
 }
 
 /* Responsive */
@@ -100,10 +104,6 @@ header:
   .hero {
     grid-template-columns: 1fr;
     text-align: center;
-  }
-
-  .hero__content {
-    padding: 0;
   }
 
   .hero__buttons {
@@ -136,15 +136,34 @@ header:
     </p>
 
     <div class="hero__buttons">
-      <a href="/projects/" class="hero__btn hero__btn--primary">View Projects</a>
-      <a href="/about/" class="hero__btn hero__btn--secondary">About Me</a>
+      <a href="/projects/" class="hero__btn hero__btn--primary">Projects</a>
+      <a href="/about/" class="hero__btn hero__btn--secondary">About</a>
     </div>
 
-    <!-- Icons -->
+    <!-- ICONS -->
     <div class="hero__icons">
-      <a href="https://github.com/Jay-Jay342" target="_blank">GitHub</a>
-      <a href="https://www.linkedin.com/in/jason-jackson-allen-65649531b/" target="_blank">LinkedIn</a>
-      <a href="mailto:jasonjackson-allen@hotmail.com">Email</a>
+
+      <!-- GitHub -->
+      <a href="https://github.com/Jay-Jay342" target="_blank" class="hero__icon" aria-label="GitHub">
+        <svg viewBox="0 0 16 16">
+          <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+        </svg>
+      </a>
+
+      <!-- LinkedIn -->
+      <a href="https://www.linkedin.com/in/jason-jackson-allen-65649531b/" target="_blank" class="hero__icon" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24">
+          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.35V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.368-1.85 3.6 0 4.268 2.37 4.268 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zM6.814 20.452H3.86V9h2.954v11.452z"/>
+        </svg>
+      </a>
+
+      <!-- Email -->
+      <a href="mailto:jasonjackson-allen@hotmail.com" class="hero__icon" aria-label="Email">
+        <svg viewBox="0 0 24 24">
+          <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
+        </svg>
+      </a>
+
     </div>
 
   </div>

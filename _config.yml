@@ -22,10 +22,6 @@ title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Jason Jackson-Allen"
 description              : "Insight Analyst specialising in Power BI, DAX, and data-driven decision making."
-header:
-  overlay_color: "#000"
-  overlay_filter: 0.4
-  overlay_image: "/assets/images/banner.jpg"
 url                      : "https://jay-jay342.github.io/"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -132,15 +128,13 @@ author:
       icon: "fab fa-fw fa-github"
       url: "https://github.com/Jay-Jay342"
       
-   # Navigation (Top Menu)
+# Navigation (Top Menu)
 header:
   nav:
     - title: "About"
-      url: /
+      url: /about/
     - title: "Projects"
       url: /projects/
-    - title: "Experience"
-      url: /about/
     - title: "Blog"
       url: /blog/
 

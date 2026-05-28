@@ -23,7 +23,7 @@ permalink: /projects/
 
       <!-- Project 1 -->
       <a class="portfolio-card portfolio-card--project" href="#">
-        <img src="/assets/images/project1.jpg" class="portfolio-card__image">
+        <img src="/assets/images/forecasting.jpg" class="portfolio-card__image">
         <h3 class="portfolio-card__title">Retail Stock Forecasting</h3>
         <p class="portfolio-card__text">
           Forecasting online retail demand using time series modelling to optimise stock planning and reduce waste.
@@ -53,7 +53,7 @@ permalink: /projects/
 
       <!-- Project 4 -->
       <a class="portfolio-card portfolio-card--project" href="#">
-        <img src="/assets/images/project4.jpg" class="portfolio-card__image">
+        <img src="/assets/images/air.jpg" class="portfolio-card__image">
         <h3 class="portfolio-card__title">Air Quality Monitoring (IoT)</h3>
         <p class="portfolio-card__text">
           Live reporting and seasonal analysis of air quality data using IoT sensors.
@@ -63,7 +63,7 @@ permalink: /projects/
 
       <!-- Project 5 -->
       <a class="portfolio-card portfolio-card--project" href="#">
-        <img src="/assets/images/project5.jpg" class="portfolio-card__image">
+        <img src="/assets/images/people.jpg" class="portfolio-card__image">
         <h3 class="portfolio-card__title">Workforce Analytics</h3>
         <p class="portfolio-card__text">
           Role-based dashboards using row-level security for leadership insights.
@@ -73,7 +73,7 @@ permalink: /projects/
 
       <!-- Project 6 -->
       <a class="portfolio-card portfolio-card--project" href="#">
-        <img src="/assets/images/project6.jpg" class="portfolio-card__image">
+        <img src="/assets/images/gym.jpg" class="portfolio-card__image">
         <h3 class="portfolio-card__title">Leisure Centre Performance</h3>
         <p class="portfolio-card__text">
           Performance reporting for management and elected members analysing income and demand trends.

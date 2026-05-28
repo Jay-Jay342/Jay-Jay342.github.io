@@ -33,7 +33,7 @@ permalink: /projects/
 
       <!-- Project 2 -->
       <a class="portfolio-card portfolio-card--project" href="#">
-        <img src="/assets/images/project2.jpg" class="portfolio-card__image">
+        <img src="/assets/images/dashboard.jpg" class="portfolio-card__image">
         <h3 class="portfolio-card__title">Operational Dashboards</h3>
         <p class="portfolio-card__text">
           Power BI dashboards analysing performance, demand, and service delivery for operational insight.
@@ -43,7 +43,7 @@ permalink: /projects/
 
       <!-- Project 3 -->
       <a class="portfolio-card portfolio-card--project" href="#">
-        <img src="/assets/images/project3.jpg" class="portfolio-card__image">
+        <img src="/assets/images/code.jpg" class="portfolio-card__image">
         <h3 class="portfolio-card__title">Public Sector Analytics</h3>
         <p class="portfolio-card__text">
           ETL-driven analytics supporting strategic decisions across services and departments.

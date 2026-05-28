@@ -1,103 +1,142 @@
 ---
-layout: archive
+layout: default
+title: "Home"
+permalink: /
 ---
-{%- assign locale = page.locale | default: layout.locale | default: site.locale %}
 
-<div class="portfolio-home">
+<style>
+  /* Simple hero landing layout */
+  .simple-landing {
+    min-height: calc(100vh - 120px);
+    display: grid;
+    place-items: center;
+    padding: 4rem 1.25rem;
+  }
 
-  <section class="portfolio-hero">
-    <div class="portfolio-hero__content">
-      <p class="portfolio-hero__eyebrow">Insight Through Data</p>
-      <h1 class="portfolio-hero__title">Jason Jackson-Allen</h1>
-      <p class="portfolio-hero__lead">
-        Insight Analyst specialising in Power BI, DAX, and data-driven decision making within the public sector.
-      </p>
-      <p class="portfolio-hero__text">
-        I transform complex datasets into clear, actionable insight that supports operational and strategic decisions.
-      </p>
-    </div>
-  </section>
+  .simple-landing__panel {
+    width: min(900px, 100%);
+    text-align: center;
+    padding: 3.5rem 1.5rem;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #2e9cc3 0%, #19b3a8 100%);
+    color: #ffffff;
+    box-shadow: 0 18px 45px rgba(0,0,0,.18);
+  }
 
-  <section class="portfolio-section">
-    <h2 class="archive__subtitle">About Me</h2>
-    <div class="portfolio-section__content">
-      <p>
-        I work at the intersection of data, reporting, and decision-making, helping turn complex operational information
-        into clear insight. My focus includes dashboard development, advanced DAX modelling, forecasting, and service
-        performance analysis.
-      </p>
-      <p>
-        My portfolio reflects experience across public sector analytics, operational reporting, and data storytelling,
-        with a particular focus on building practical tools that support better decisions.
-      </p>
-    </div>
-  </section>
+  .simple-landing__name {
+    font-size: clamp(2.2rem, 4vw, 3.25rem);
+    line-height: 1.1;
+    margin: 0 0 0.75rem 0;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+  }
 
-  <section class="portfolio-section">
-    <h2 class="archive__subtitle">Core Expertise</h2>
-    <div class="portfolio-card-grid portfolio-card-grid--skills">
-      <div class="portfolio-card portfolio-card--skill">
-        <h3 class="portfolio-card__title">Power BI</h3>
-        <p class="portfolio-card__text">Operational dashboards, reporting, and interactive insight.</p>
-      </div>
+  .simple-landing__tagline {
+    margin: 0 auto 1.75rem auto;
+    max-width: 60ch;
+    font-size: 1.05rem;
+    opacity: .95;
+  }
 
-      <div class="portfolio-card portfolio-card--skill">
-        <h3 class="portfolio-card__title">DAX Modelling</h3>
-        <p class="portfolio-card__text">Complex measures, reusable logic, and robust semantic modelling.</p>
-      </div>
+  .simple-landing__icons {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    margin: 0 0 1.75rem 0;
+    flex-wrap: wrap;
+  }
 
-      <div class="portfolio-card portfolio-card--skill">
-        <h3 class="portfolio-card__title">Forecasting</h3>
-        <p class="portfolio-card__text">Trend analysis, demand modelling, and performance forecasting.</p>
-      </div>
+  .simple-landing__icon {
+    width: 44px;
+    height: 44px;
+    display: inline-grid;
+    place-items: center;
+    border-radius: 50%;
+    background: rgba(255,255,255,.18);
+    border: 1px solid rgba(255,255,255,.22);
+    transition: transform .15s ease, background .15s ease;
+    text-decoration: none;
+  }
+  .simple-landing__icon:hover {
+    transform: translateY(-2px);
+    background: rgba(255,255,255,.26);
+  }
+  .simple-landing__icon svg {
+    width: 22px;
+    height: 22px;
+    fill: #fff;
+  }
 
-      <div class="portfolio-card portfolio-card--skill">
-        <h3 class="portfolio-card__title">Public Sector Analytics</h3>
-        <p class="portfolio-card__text">Service performance, operational insight, and decision support.</p>
-      </div>
-    </div>
-  </section>
+  /* Navigation buttons pulled from site nav */
+  .simple-landing__nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 0.25rem;
+  }
 
-  <section class="portfolio-section">
-    <h2 class="archive__subtitle">Featured Projects</h2>
-    <div class="portfolio-card-grid portfolio-card-grid--projects">
-      <a class="portfolio-card portfolio-card--project" href="/projects/care-home-relocation/">
-        <h3 class="portfolio-card__title">Care Home Relocation Analysis</h3>
-        <p class="portfolio-card__text">
-          Analysed resident placement outcomes across multiple closures, focusing on cost comparison,
-          preference alignment, and service impact.
-        </p>
-        <span class="portfolio-card__link">View project</span>
+  .simple-landing__btn {
+    display: inline-block;
+    padding: 0.8rem 1.1rem;
+    border-radius: 10px;
+    background: rgba(255,255,255,.12);
+    border: 1px solid rgba(255,255,255,.28);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: .2px;
+    transition: transform .15s ease, background .15s ease, border-color .15s ease;
+    backdrop-filter: blur(6px);
+  }
+
+  .simple-landing__btn:hover {
+    transform: translateY(-2px);
+    background: rgba(255,255,255,.18);
+    border-color: rgba(255,255,255,.38);
+  }
+
+  .simple-landing__btn:focus {
+    outline: 3px solid rgba(255,255,255,.45);
+    outline-offset: 3px;
+  }
+</style>
+
+<div class="simple-landing">
+  <div class="simple-landing__panel">
+
+    <h1 class="simple-landing__name">Jason Jackson-Allen</h1>
+
+    <p class="simple-landing__tagline">
+      Insight Analyst specialising in Power BI, DAX, and data-driven decision making in the public sector.
+    </p>
+
+    <!-- Optional: social icons (edit links as needed) -->
+    <div class="simple-landing__icons" aria-label="Social links">
+      <a class="simple-landing__icon" href="https://github.com/Jay-Jay342" target="_blank" rel="noopener" aria-label="GitHub">
+        <!-- GitHub icon -->
+        <svg viewBox="0 0 16 16" aria-hidden="true">
+          <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+        </svg>
       </a>
 
-      <a class="portfolio-card portfolio-card--project" href="/projects/erlang-model/">
-        <h3 class="portfolio-card__title">Workforce Planning (Erlang Model)</h3>
-        <p class="portfolio-card__text">
-          Developed a staffing model to forecast demand and optimise workforce allocation.
-        </p>
-        <span class="portfolio-card__link">View project</span>
-      </a>
-
-      <a class="portfolio-card portfolio-card--project" href="/projects/call-centre-dashboard/">
-        <h3 class="portfolio-card__title">Call Centre Performance Dashboard</h3>
-        <p class="portfolio-card__text">
-          Designed a Power BI dashboard tracking demand, handling time, and operational performance trends.
-        </p>
-        <span class="portfolio-card__link">View project</span>
+      <a class="simple-landing__icon" href="https://www.linkedin.com/in/jason-jackson-allen-65649531b/" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <!-- LinkedIn icon -->
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.35V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.368-1.85 3.6 0 4.268 2.37 4.268 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zM6.814 20.452H3.86V9h2.954v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.727v20.545C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.273V1.727C24 .774 23.2 0 22.222 0h.003z"/>
+        </svg>
       </a>
     </div>
-  </section>
 
-  <section class="portfolio-section portfolio-section--contact">
-    <h2 class="archive__subtitle">Get in Touch</h2>
-    <div class="portfolio-section__content">
-      <p>If you’d like to discuss analytics, data projects, or collaboration opportunities:</p>
-      <ul class="portfolio-contact-list">
-        <li><strong>Email:</strong> <a href="mailto:jasonjackson-allen@hotmail.com">jasonjackson-allen@hotmail.com</a></li>
-        <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/jason-jackson-allen-65649531b/">Jason Jackson-Allen</a></li>
-        <li><strong>GitHub:</strong> <a href="https://github.com/Jay-Jay342">Jay-Jay342</a></li>
-      </ul>
-    </div>
-  </section>
+    <!-- Buttons generated from your nav -->
+    <nav class="simple-landing__nav" aria-label="Site navigation">
+      {%- assign nav = site.data.navigation.main | default: site.navigation.main -%}
+      {%- for item in nav -%}
+        <a class="simple-landing__btn" href="{{ item.url | relative_url }}">
+          {{ item.title }}
+        </a>
+      {%- endfor -%}
+    </nav>
 
+  </div>
 </div>

@@ -7,3 +7,143 @@ search: false
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
+
+.portfolio-home {
+  display: block;
+}
+
+.portfolio-hero {
+  margin-bottom: 2.5rem;
+  padding: 2.5rem 0 1rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.portfolio-hero__content {
+  max-width: 850px;
+}
+
+.portfolio-hero__eyebrow {
+  margin: 0 0 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #2563eb;
+}
+
+.portfolio-hero__title {
+  margin: 0 0 0.75rem;
+  font-size: 2.6rem;
+  line-height: 1.1;
+}
+
+.portfolio-hero__lead {
+  margin: 0 0 0.9rem;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+.portfolio-hero__text {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #4b5563;
+}
+
+.portfolio-section {
+  margin: 2.5rem 0;
+}
+
+.portfolio-section__content {
+  max-width: 850px;
+}
+
+.portfolio-section__content p {
+  margin-bottom: 1rem;
+  line-height: 1.8;
+}
+
+.portfolio-card-grid {
+  display: grid;
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+
+.portfolio-card-grid--skills {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.portfolio-card-grid--projects {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.portfolio-card {
+  display: block;
+  padding: 1.25rem;
+  border: 1px solid #d1d5db;
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+
+.portfolio-card--project {
+  text-decoration: none;
+  color: inherit;
+}
+
+.portfolio-card--project:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+  border-color: #9ca3af;
+}
+
+.portfolio-card__title {
+  margin: 0 0 0.7rem;
+  font-size: 1.2rem;
+  line-height: 1.35;
+}
+
+.portfolio-card__text {
+  margin: 0;
+  line-height: 1.7;
+  color: #4b5563;
+}
+
+.portfolio-card__link {
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #2563eb;
+}
+
+.portfolio-contact-list {
+  margin: 1rem 0 0;
+  padding-left: 1.2rem;
+}
+
+.portfolio-contact-list li {
+  margin-bottom: 0.6rem;
+  line-height: 1.7;
+}
+
+.archive__subtitle {
+  margin-bottom: 1rem;
+  font-size: 1.35rem;
+}
+
+@media (max-width: 768px) {
+  .portfolio-hero {
+    padding-top: 1.5rem;
+  }
+
+  .portfolio-hero__title {
+    font-size: 2rem;
+  }
+
+  .portfolio-hero__lead {
+    font-size: 1.05rem;
+  }
+}

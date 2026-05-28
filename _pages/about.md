@@ -15,6 +15,25 @@ header:
     Turning data into clear, actionable insight that drives real-world impact.
   </p>
 
+
+<section class="about-section">
+  <p>
+    Hi, I’m <strong>Jason</strong>, an Insight Analyst with a passion for using data to solve problems, 
+    support decision-making, and improve real-world outcomes. With experience across the public sector, 
+    I specialise in transforming complex data into clear, actionable insight.
+  </p>
+
+  <p>
+    I believe data is about more than just numbers — it’s about understanding people, uncovering patterns, 
+    and driving better decisions.
+  </p>
+
+  <p>
+    Whether I’m building dashboards, analysing trends, or developing data science skills, I bring a 
+    commitment to clarity, continuous learning, and impactful analytics to everything I do.
+  </p>
+</section>
+
 </section>
 
   <section class="portfolio-section">
@@ -42,26 +61,6 @@ header:
     </div>
   </section>
   
-</section>
-
-<section class="about-section">
-  <p>
-    Hi, I’m <strong>Jason</strong>, an Insight Analyst with a passion for using data to solve problems, 
-    support decision-making, and improve real-world outcomes. With experience across the public sector, 
-    I specialise in transforming complex data into clear, actionable insight.
-  </p>
-
-  <p>
-    I believe data is about more than just numbers — it’s about understanding people, uncovering patterns, 
-    and driving better decisions.
-  </p>
-
-  <p>
-    Whether I’m building dashboards, analysing trends, or developing data science skills, I bring a 
-    commitment to clarity, continuous learning, and impactful analytics to everything I do.
-  </p>
-</section>
-
 <hr>
 
 <h2>Experience</h2>

@@ -128,16 +128,6 @@ author:
       icon: "fab fa-fw fa-github"
       url: "https://github.com/Jay-Jay342"
       
-# Navigation (Top Menu)
-header:
-  nav:
-    - title: "About"
-      url: /about/
-    - title: "Projects"
-      url: /projects/
-    - title: "Blog"
-      url: /blog/
-
 
 # Site Footer
 footer:

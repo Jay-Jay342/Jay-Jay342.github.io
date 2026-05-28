@@ -110,4 +110,3 @@ header:
   <div>Microsoft Fabric (Applied Skills)</div>
   <div>Python (PCEP)</div>
 </div>
-``

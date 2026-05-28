@@ -1,21 +1,104 @@
 ---
 layout: archive
 ---
+
 {%- assign locale = page.locale | default: layout.locale | default: site.locale %}
 
-{{ content }}
+<div class="portfolio-home">
 
-<h3 class="archive__subtitle">{{ site.data.ui-text[locale].recent_posts | default: "Recent Posts" }}</h3>
+  <section class="portfolio-hero">
+    <div class="portfolio-hero__content">
+      <p class="portfolio-hero__eyebrow">Insight Through Data</p>
+      <h1 class="portfolio-hero__title">Jason Jackson-Allen</h1>
+      <p class="portfolio-hero__lead">
+        Insight Analyst specialising in Power BI, DAX, and data-driven decision making within the public sector.
+      </p>
+      <p class="portfolio-hero__text">
+        I transform complex datasets into clear, actionable insight that supports operational and strategic decisions.
+      </p>
+    </div>
+  </section>
 
-{% if paginator %}
-  {% assign posts = paginator.posts %}
-{% else %}
-  {% assign posts = site.posts %}
-{% endif %}
+  <section class="portfolio-section">
+    <h2 class="archive__subtitle">About Me</h2>
+    <div class="portfolio-section__content">
+      <p>
+        I work at the intersection of data, reporting, and decision-making, helping turn complex operational information
+        into clear insight. My focus includes dashboard development, advanced DAX modelling, forecasting, and service
+        performance analysis.
+      </p>
+      <p>
+        My portfolio reflects experience across public sector analytics, operational reporting, and data storytelling,
+        with a particular focus on building practical tools that support better decisions.
+      </p>
+    </div>
+  </section>
 
-{% assign entries_layout = page.entries_layout | default: 'list' %}
-<div class="entries-{{ entries_layout }}">
-  {% include documents-collection.html locale=locale entries=posts type=entries_layout %}
+  <section class="portfolio-section">
+    <h2 class="archive__subtitle">Core Expertise</h2>
+    <div class="portfolio-card-grid portfolio-card-grid--skills">
+      <div class="portfolio-card portfolio-card--skill">
+        <h3 class="portfolio-card__title">Power BI</h3>
+        <p class="portfolio-card__text">Operational dashboards, reporting, and interactive insight.</p>
+      </div>
+
+      <div class="portfolio-card portfolio-card--skill">
+        <h3 class="portfolio-card__title">DAX Modelling</h3>
+        <p class="portfolio-card__text">Complex measures, reusable logic, and robust semantic modelling.</p>
+      </div>
+
+      <div class="portfolio-card portfolio-card--skill">
+        <h3 class="portfolio-card__title">Forecasting</h3>
+        <p class="portfolio-card__text">Trend analysis, demand modelling, and performance forecasting.</p>
+      </div>
+
+      <div class="portfolio-card portfolio-card--skill">
+        <h3 class="portfolio-card__title">Public Sector Analytics</h3>
+        <p class="portfolio-card__text">Service performance, operational insight, and decision support.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="portfolio-section">
+    <h2 class="archive__subtitle">Featured Projects</h2>
+    <div class="portfolio-card-grid portfolio-card-grid--projects">
+      <a class="portfolio-card portfolio-card--project" href="/projects/care-home-relocation/">
+        <h3 class="portfolio-card__title">Care Home Relocation Analysis</h3>
+        <p class="portfolio-card__text">
+          Analysed resident placement outcomes across multiple closures, focusing on cost comparison,
+          preference alignment, and service impact.
+        </p>
+        <span class="portfolio-card__link">View project</span>
+      </a>
+
+      <a class="portfolio-card portfolio-card--project" href="/projects/erlang-model/">
+        <h3 class="portfolio-card__title">Workforce Planning (Erlang Model)</h3>
+        <p class="portfolio-card__text">
+          Developed a staffing model to forecast demand and optimise workforce allocation.
+        </p>
+        <span class="portfolio-card__link">View project</span>
+      </a>
+
+      <a class="portfolio-card portfolio-card--project" href="/projects/call-centre-dashboard/">
+        <h3 class="portfolio-card__title">Call Centre Performance Dashboard</h3>
+        <p class="portfolio-card__text">
+          Designed a Power BI dashboard tracking demand, handling time, and operational performance trends.
+        </p>
+        <span class="portfolio-card__link">View project</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="portfolio-section portfolio-section--contact">
+    <h2 class="archive__subtitle">Get in Touch</h2>
+    <div class="portfolio-section__content">
+      <p>If you’d like to discuss analytics, data projects, or collaboration opportunities:</p>
+      <ul class="portfolio-contact-list">
+        <li><strong>Email:</strong> <a href="mailto:jasonjackson-allen@hotmail.com">jasonjackson-allen@hotmail.com</a></li>
+        <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/jason-jackson-allen-65649531b/">Jason Jackson-Allen</a></li>
+        <li><strong>GitHub:</strong> <a href="https://github.com/Jay-Jay342">Jay-Jay342</a></li>
+      </ul>
+    </div>
+  </section>
+
 </div>
-
-{% include paginator.html locale=locale %}

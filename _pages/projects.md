@@ -1,74 +1,87 @@
 ---
-layout: single
+layout: archive
 title: "Projects"
 permalink: /projects/
 ---
 
-<section class="projects-hero">
-  <h1>Insight Drives Impact</h1>
-  <p>Projects focused on turning data into actionable, real-world insight.</p>
-</section>
+<div class="portfolio-home">
 
-<div class="projects-grid">
-
-  <!-- Project 1 -->
-  <a href="#" class="project-card">
-    <img src="/assets/images/project1.jpg" alt="Forecasting Retail">
-    <div class="project-content">
-      <h3>Forecasting Retail Stock Demand</h3>
-      <p>Time series forecasting to improve stock planning, reduce waste, and optimise decision-making.</p>
-      <span class="btn">View Project →</span>
+  <section class="portfolio-hero">
+    <div class="portfolio-hero__content">
+      <p class="portfolio-hero__eyebrow">Data Portfolio</p>
+      <h1 class="portfolio-hero__title">Insight Drives Impact</h1>
+      <p class="portfolio-hero__lead">
+        A collection of projects focused on transforming data into meaningful, actionable insight.
+      </p>
     </div>
-  </a>
+  </section>
 
-  <!-- Project 2 -->
-  <a href="#" class="project-card">
-    <img src="/assets/images/project2.jpg" alt="Dashboards">
-    <div class="project-content">
-      <h3>Operational Analytics & Dashboards</h3>
-      <p>Power BI dashboards tracking performance, demand, and service delivery with clear, user-focused visuals.</p>
-      <span class="btn">View Project →</span>
-    </div>
-  </a>
+  <section class="portfolio-section">
+    <h2 class="archive__subtitle">Projects</h2>
 
-  <!-- Project 3 -->
-  <a href="#" class="project-card">
-    <img src="/assets/images/project3.jpg" alt="Public Sector Analytics">
-    <div class="project-content">
-      <h3>Public Sector Data & Insight</h3>
-      <p>ETL-driven analytics projects supporting strategic decisions across multiple council services.</p>
-      <span class="btn">View Project →</span>
-    </div>
-  </a>
+    <div class="portfolio-card-grid portfolio-card-grid--projects">
 
-  <!-- Project 4 -->
-  <a href="#" class="project-card">
-    <img src="/assets/images/project4.jpg" alt="Air Quality">
-    <div class="project-content">
-      <h3>Air Quality Monitoring (IoT)</h3>
-      <p>Live analysis of air quality data using IoT sensors to explore trends and seasonality.</p>
-      <span class="btn">View Project →</span>
-    </div>
-  </a>
+      <!-- Project 1 -->
+      <a class="portfolio-card portfolio-card--project" href="#">
+        <img src="/assets/images/project1.jpg" class="portfolio-card__image">
+        <h3 class="portfolio-card__title">Retail Stock Forecasting</h3>
+        <p class="portfolio-card__text">
+          Forecasting online retail demand using time series modelling to optimise stock planning and reduce waste.
+        </p>
+        <span class="portfolio-card__link">View project</span>
+      </a>
 
-  <!-- Project 5 -->
-  <a href="#" class="project-card">
-    <img src="/assets/images/project5.jpg" alt="Workforce">
-    <div class="project-content">
-      <h3>Workforce Analytics (RLS)</h3>
-      <p>Interactive dashboards with row-level security for directors and senior reporting.</p>
-      <span class="btn">View Project →</span>
-    </div>
-  </a>
+      <!-- Project 2 -->
+      <a class="portfolio-card portfolio-card--project" href="#">
+        <img src="/assets/images/project2.jpg" class="portfolio-card__image">
+        <h3 class="portfolio-card__title">Operational Dashboards</h3>
+        <p class="portfolio-card__text">
+          Power BI dashboards analysing performance, demand, and service delivery for operational insight.
+        </p>
+        <span class="portfolio-card__link">View project</span>
+      </a>
 
-  <!-- Project 6 -->
-  <a href="#" class="project-card">
-    <img src="/assets/images/project6.jpg" alt="Leisure">
-    <div class="project-content">
-      <h3>Leisure Centre Performance</h3>
-      <p>Dual-report solution for members and managers analysing income, performance, and trends.</p>
-      <span class="btn">View Project →</span>
+      <!-- Project 3 -->
+      <a class="portfolio-card portfolio-card--project" href="#">
+        <img src="/assets/images/project3.jpg" class="portfolio-card__image">
+        <h3 class="portfolio-card__title">Public Sector Analytics</h3>
+        <p class="portfolio-card__text">
+          ETL-driven analytics supporting strategic decisions across services and departments.
+        </p>
+        <span class="portfolio-card__link">View project</span>
+      </a>
+
+      <!-- Project 4 -->
+      <a class="portfolio-card portfolio-card--project" href="#">
+        <img src="/assets/images/project4.jpg" class="portfolio-card__image">
+        <h3 class="portfolio-card__title">Air Quality Monitoring (IoT)</h3>
+        <p class="portfolio-card__text">
+          Live reporting and seasonal analysis of air quality data using IoT sensors.
+        </p>
+        <span class="portfolio-card__link">View project</span>
+      </a>
+
+      <!-- Project 5 -->
+      <a class="portfolio-card portfolio-card--project" href="#">
+        <img src="/assets/images/project5.jpg" class="portfolio-card__image">
+        <h3 class="portfolio-card__title">Workforce Analytics</h3>
+        <p class="portfolio-card__text">
+          Role-based dashboards using row-level security for leadership insights.
+        </p>
+        <span class="portfolio-card__link">View project</span>
+      </a>
+
+      <!-- Project 6 -->
+      <a class="portfolio-card portfolio-card--project" href="#">
+        <img src="/assets/images/project6.jpg" class="portfolio-card__image">
+        <h3 class="portfolio-card__title">Leisure Centre Performance</h3>
+        <p class="portfolio-card__text">
+          Performance reporting for management and elected members analysing income and demand trends.
+        </p>
+        <span class="portfolio-card__link">View project</span>
+      </a>
+
     </div>
-  </a>
+  </section>
 
 </div>

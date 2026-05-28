@@ -9,14 +9,10 @@ header:
   overlay_filter: 0.5
   overlay_image: "/assets/images/banner.jpg"
 ---
-<p class="portfolio-hero__eyebrow">Projects</p>
-
 <div class="portfolio-home">
-
   <section class="portfolio-hero">
     <div class="portfolio-hero__content">
-      <p class="portfolio-hero__eyebrow">Data Portfolio</p>
-      <h1 class="portfolio-hero__title">Insight Drives Impact</h1>
+       <h1 class="portfolio-hero__title">Insight Drives Impact</h1>
       <p class="portfolio-hero__lead">
         A collection of projects focused on transforming data into meaningful, actionable insight.
       </p>

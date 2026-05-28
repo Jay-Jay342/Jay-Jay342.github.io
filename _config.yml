@@ -114,22 +114,23 @@ analytics:
 
 # Site Author
 author:
-  name             : "Jason Jackson-Allen"
-  avatar           : "/assets/images/Me.jpg"
-  bio              : "Insight Analyst"
-  location         : "Wiltshire"
-  email            : "jasonjackson-allen@hotmail.com"
-
+  name: "Jason Jackson-Allen"
+  avatar: "/assets/images/Me.jpg"
+  bio: "Insight Analyst | Power BI | Data Analytics"
+  location: "Wiltshire"
+  email: "jasonjackson-allen@hotmail.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-square-envelope"
-       url: "mailto:jasonjackson-allen@hotmail.com"
+      url: "mailto:jasonjackson-allen@hotmail.com"
+
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/jason-jackson-allen-65649531b/"
+
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://jay-jay342.github.io/"
+      url: "https://github.com/Jay-Jay342"
    
 
 # Site Footer

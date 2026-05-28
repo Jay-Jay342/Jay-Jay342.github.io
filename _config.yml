@@ -22,7 +22,7 @@ title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Jason Jackson-Allen"
 description              : "Insight Analyst specialising in Power BI, DAX, and data-driven decision making."
-Header:
+header:
   overlay_color: "#000"
   overlay_filter: 0.4
   overlay_image: "/assets/images/banner.jpg"
@@ -131,7 +131,19 @@ author:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/Jay-Jay342"
-   
+      
+   # Navigation (Top Menu)
+header:
+  nav:
+    - title: "About"
+      url: /
+    - title: "Projects"
+      url: /projects/
+    - title: "Experience"
+      url: /about/
+    - title: "Blog"
+      url: /blog/
+
 
 # Site Footer
 footer:

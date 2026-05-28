@@ -1,14 +1,47 @@
 ---
-layout: single
+layout: archive
 title: "About Me"
 permalink: /about/
----
+author_profile: true
 
+header:
+  overlay_color: "#000"
+  overlay_filter: 0.5
+  overlay_image: "/assets/images/banner.jpg"
+---
 <section class="hero">
   <h1>Insight That Matters</h1>
   <p class="hero-sub">
     Turning data into clear, actionable insight that drives real-world impact.
   </p>
+
+</section>
+
+  <section class="portfolio-section">
+    <h2 class="archive__subtitle">Core Expertise</h2>
+    <div class="portfolio-card-grid portfolio-card-grid--skills">
+      <div class="portfolio-card portfolio-card--skill">
+        <h3 class="portfolio-card__title">Power BI</h3>
+        <p class="portfolio-card__text">Operational dashboards, reporting, and interactive insight.</p>
+      </div>
+
+      <div class="portfolio-card portfolio-card--skill">
+        <h3 class="portfolio-card__title">DAX Modelling</h3>
+        <p class="portfolio-card__text">Complex measures, reusable logic, and robust semantic modelling.</p>
+      </div>
+
+      <div class="portfolio-card portfolio-card--skill">
+        <h3 class="portfolio-card__title">Forecasting</h3>
+        <p class="portfolio-card__text">Trend analysis, demand modelling, and performance forecasting.</p>
+      </div>
+
+      <div class="portfolio-card portfolio-card--skill">
+        <h3 class="portfolio-card__title">Public Sector Analytics</h3>
+        <p class="portfolio-card__text">Service performance, operational insight, and decision support.</p>
+      </div>
+    </div>
+  </section>
+  
 </section>
 
 <section class="about-section">

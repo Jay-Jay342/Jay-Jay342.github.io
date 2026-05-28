@@ -83,41 +83,40 @@ search: false
 }
 
 /* =============================
-   GRID
+   PROJECT GRID (PROPER DESKTOP BEHAVIOUR)
 ============================= */
 
-.portfolio-card-grid {
+.portfolio-card-grid--projects {
   display: grid;
   gap: 1.5rem;
-  margin-top: 1rem;
 
-  /* IMPORTANT: makes cards equal height per row */
+  /* MOBILE FIRST */
+  grid-template-columns: 1fr;
+
   align-items: stretch;
 }
 
-/* Skills grid */
-.portfolio-card-grid--skills {
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-}
-
-/* Projects grid: wider cards + responsive */
-.portfolio-card-grid--projects {
-  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-}
-
 /* Tablet */
-@media (max-width: 1024px) {
+@media (min-width: 700px) {
   .portfolio-card-grid--projects {
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* Mobile */
-@media (max-width: 640px) {
+/* Laptop / Desktop (KEY FIX) */
+@media (min-width: 1100px) {
   .portfolio-card-grid--projects {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
+
+/* Very wide screens (optional but nice) */
+@media (min-width: 1500px) {
+  .portfolio-card-grid--projects {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 
 /* =============================
    CARDS

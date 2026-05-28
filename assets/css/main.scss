@@ -1,12 +1,15 @@
 ---
-# Only the main Sass file needs front matter (the dashes are enough)
 search: false
 ---
 
 @charset "utf-8";
 
-@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
-@import "minimal-mistakes"; // main partials
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
+@import "minimal-mistakes";
+
+/* =============================
+   LAYOUT
+============================= */
 
 .portfolio-home {
   display: block;
@@ -51,6 +54,10 @@ search: false
   color: #4b5563;
 }
 
+/* =============================
+   SECTIONS
+============================= */
+
 .portfolio-section {
   margin: 2.5rem 0;
 }
@@ -64,23 +71,53 @@ search: false
   line-height: 1.8;
 }
 
+/* =============================
+   GRID
+============================= */
+
 .portfolio-card-grid {
   display: grid;
-  gap: 1.25rem;
+  gap: 1.5rem;
   margin-top: 1rem;
+  align-items: start; /* 🔥 prevents vertical stretching */
 }
 
 .portfolio-card-grid--skills {
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
+.portfolio-card-grid--projects {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .portfolio-card-grid--projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .portfolio-card-grid--projects {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =============================
+   CARDS
+============================= */
+
 .portfolio-card {
-  display: block;
   padding: 1.25rem;
   border: 1px solid #d1d5db;
   border-radius: 14px;
   background: #ffffff;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+
+  display: flex;
+  flex-direction: column;
+
   transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
 }
 
@@ -89,18 +126,60 @@ search: false
   color: inherit;
 }
 
+/* Image */
+.portfolio-card__image {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 0.8rem;
+  transition: transform 0.3s ease;
+}
 
+/* Title */
 .portfolio-card__title {
-  margin: 0 0 0.7rem;
+  margin: 0 0 0.6rem;
   font-size: 1.2rem;
   line-height: 1.35;
 }
 
+/* Description (clamped to stop "stretching") */
 .portfolio-card__text {
   margin: 0;
-  line-height: 1.7;
+  line-height: 1.6;
   color: #4b5563;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 4;   /* ✅ controls card height */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+
+  flex-grow: 1;
 }
+
+/* CTA */
+.portfolio-card__link {
+  display: inline-block;
+  margin-top: 0.9rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #2563eb;
+}
+
+/* Hover */
+.portfolio-card--project:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.08);
+  border-color: #9ca3af;
+}
+
+.portfolio-card--project:hover .portfolio-card__image {
+  transform: scale(1.05);
+}
+
+/* =============================
+   OTHER COMPONENTS
+============================= */
 
 .portfolio-contact-list {
   margin: 1rem 0 0;
@@ -117,21 +196,10 @@ search: false
   font-size: 1.35rem;
 }
 
-@media (max-width: 768px) {
-  .portfolio-hero {
-    padding-top: 1.5rem;
-  }
+/* =============================
+   GENERAL SECTIONS
+============================= */
 
-  .portfolio-hero__title {
-    font-size: 2rem;
-  }
-
-  .portfolio-hero__lead {
-    font-size: 1.05rem;
-  }
-}
-
-/* Hero Section */
 .hero {
   text-align: center;
   margin-bottom: 2rem;
@@ -148,7 +216,6 @@ search: false
   color: #666;
 }
 
-/* About Section */
 .about-section {
   max-width: 800px;
   margin: auto;
@@ -161,7 +228,7 @@ search: false
   margin-bottom: 1rem;
 }
 
-/* Cards (Experience + Education) */
+/* Standard cards */
 .card {
   background: #ffffff;
   padding: 1.5rem;
@@ -175,7 +242,6 @@ search: false
   transform: translateY(-3px);
 }
 
-/* Titles */
 .card h3 {
   margin-bottom: 0.3rem;
 }
@@ -185,7 +251,7 @@ search: false
   color: #777;
 }
 
-/* Grid for certifications */
+/* Grid */
 .grid-2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -207,74 +273,4 @@ search: false
   font-size: 0.9rem;
   color: #007acc;
   font-weight: 500;
-}
-
-/* ======================================
-   PROJECT CARDS (MATCH HOME STYLE)
-====================================== */
-
-/* Card layout (ensures equal height) */
-.portfolio-card {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-/* Image */
-.portfolio-card__image {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 0.8rem;
-
-  transition: transform 0.3s ease;
-}
-
-/* Text grows to align cards */
-.portfolio-card__text {
-  flex-grow: 1;
-}
-
-/* Link / CTA */
-.portfolio-card__link {
-  display: inline-block;
-  margin-top: 1rem;
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: #2563eb;
-}
-
-/* Hover effect */
-.portfolio-card--project:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
-  border-color: #9ca3af;
-}
-
-.portfolio-card--project:hover .portfolio-card__image {
-  transform: scale(1.04);
-}
-
-/* ======================================
-   PROJECT GRID (3 PER ROW)
-====================================== */
-
-.portfolio-card-grid--projects {
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-}
-
-/* Tablet */
-@media (max-width: 1024px) {
-  .portfolio-card-grid--projects {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* Mobile */
-@media (max-width: 640px) {
-  .portfolio-card-grid--projects {
-    grid-template-columns: 1fr;
-  }
 }

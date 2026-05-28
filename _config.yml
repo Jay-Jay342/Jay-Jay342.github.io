@@ -120,10 +120,6 @@ author:
   location: "Wiltshire"
   email: "jasonjackson-allen@hotmail.com"
   links:
-    - label: "Email"
-      icon: "fas fa-fw fa-square-envelope"
-      url: "mailto:jasonjackson-allen@hotmail.com"
-
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/jason-jackson-allen-65649531b/"

@@ -120,7 +120,7 @@ author:
   bio              : "Insight Analyst"
   location         : "Wiltshire"
   email            : "jasonjackson-allen@hotmail.com"
-    links:
+  links:
    - label: "Email"
     icon: "fas fa-fw fa-envelope"
     url: "mailto:jasonjackson-allen@hotmail.com"

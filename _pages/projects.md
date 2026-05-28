@@ -2,7 +2,14 @@
 layout: archive
 title: "Projects"
 permalink: /projects/
+author_profile: true
+
+header:
+  overlay_color: "#000"
+  overlay_filter: 0.5
+  overlay_image: "/assets/images/banner.jpg"
 ---
+<p class="portfolio-hero__eyebrow">Projects</p>
 
 <div class="portfolio-home">
 
